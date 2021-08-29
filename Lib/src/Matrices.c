@@ -1,14 +1,15 @@
-#include "../include/lib.h"
+//#include "../include/lib.h"
 #include <stdio.h>
 #include <conio.h>
+#include "Test_Resta.c"
 
 	int F;
 	int C;
 	
-void Matriz_A()
+void Matriz_A(int MatrizA[][C])
 {
 	printf("--MatrizA--\n\n");
-	int MatrizA[F][C], i,j, vector [F];
+	int i,j, vector [F];
 		for(i=0; i<F; i++)
 			for(j=0; j<C; j++)
 			{
@@ -27,10 +28,10 @@ void Matriz_A()
 			}
 		}
 		
-void Matriz_B()
+void Matriz_B(int MatrizB[][C])
 {
 	printf("--MatrizB--\n\n");
-	int MatrizB[F][C], i,j, vector [F];
+	int i,j, vector [F];
 		for(i=0; i<F; i++)
 			for(j=0; j<C; j++)
 			{
@@ -55,8 +56,14 @@ main(){
 	printf("Columna:\n");
 	scanf("%d", &C);
 
-	Matriz_A();
-	Matriz_B();
+	int MatrizA[F][C];
+	int MatrizB[F][C];
+
+	Matriz_A(MatrizA);
+	Matriz_B(MatrizB);
+
+	resta(F, C, MatrizA, MatrizB); //Invocacion de la clase 'resta'
+
 	getch();
 	return 0;
 }
