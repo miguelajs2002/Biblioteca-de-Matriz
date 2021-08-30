@@ -1,4 +1,4 @@
-//#include "../include/lib.h"
+#include "../include/lib.h"
 #include <stdio.h>
 #include <conio.h>
 #include "Test_Resta.c"
@@ -6,10 +6,10 @@
 	int F;
 	int C;
 	
-void Matriz_A(int MatrizA[][C])
+void Matriz_A()
 {
 	printf("--MatrizA--\n\n");
-	int i,j, vector [F];
+	int MatrizA[F][C], i,j, vector [F];
 		for(i=0; i<F; i++)
 			for(j=0; j<C; j++)
 			{
@@ -28,10 +28,10 @@ void Matriz_A(int MatrizA[][C])
 			}
 		}
 		
-void Matriz_B(int MatrizB[][C])
+void Matriz_B()
 {
 	printf("--MatrizB--\n\n");
-	int i,j, vector [F];
+	int MatrizB[F][C], i,j, vector [F];
 		for(i=0; i<F; i++)
 			for(j=0; j<C; j++)
 			{
@@ -56,13 +56,8 @@ main(){
 	printf("Columna:\n");
 	scanf("%d", &C);
 
-	int MatrizA[F][C];
-	int MatrizB[F][C];
-
-	Matriz_A(MatrizA);
-	Matriz_B(MatrizB);
-
-	resta(F, C, MatrizA, MatrizB); //Invocacion de la clase 'resta'
+	Matriz_A();
+	Matriz_B();
 
 	getch();
 	return 0;
