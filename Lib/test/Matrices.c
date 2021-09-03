@@ -1,7 +1,7 @@
-#include "../include/lib.h"
+
 #include <stdio.h>
 #include <conio.h>
-#include "Test_Resta.c"
+
 
 	int F;
 	int C;
@@ -50,7 +50,7 @@ void Matriz_B()
 			}
 		}
 
-main(){
+int main(){
 	printf("Fila:\n");
 	scanf("%d", &F);
 	printf("Columna:\n");

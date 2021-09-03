@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../src/Division3x3.c"
+#include "../test/Division3x3.c"
 
 int main(){
     int ma[3][3], mb[3][3];

@@ -7,8 +7,9 @@
  */
 
 #include <stdio.h>
+#include "../include/lib.h"
 
-void resta(int F, int C, int MatrizA[][C], int MatrizB[][C])
+void suma(int F, int C, int MatrizA[F][C], int MatrizB[F][C])
 {
     printf("\nLa suma de la MatrizA mas la MatrizB es:\n\n");
     int i, j;
